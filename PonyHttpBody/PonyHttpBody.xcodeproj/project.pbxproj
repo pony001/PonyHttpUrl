@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281336031B705BDF0092AD5F /* PHBHttpRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 281336021B705BDF0092AD5F /* PHBHttpRequestSerializer.m */; };
+		281336061B706D830092AD5F /* PHBMultipartFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 281336051B706D830092AD5F /* PHBMultipartFormData.m */; };
+		281336081B706F8D0092AD5F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281336071B706F8D0092AD5F /* MobileCoreServices.framework */; };
 		288B8C901B6F642900BF5674 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 288B8C8F1B6F642900BF5674 /* main.m */; };
 		288B8C931B6F642900BF5674 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 288B8C921B6F642900BF5674 /* AppDelegate.m */; };
 		288B8C961B6F642900BF5674 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288B8C951B6F642900BF5674 /* ViewController.m */; };
@@ -27,6 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		281336011B705BDF0092AD5F /* PHBHttpRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHBHttpRequestSerializer.h; sourceTree = "<group>"; };
+		281336021B705BDF0092AD5F /* PHBHttpRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHBHttpRequestSerializer.m; sourceTree = "<group>"; };
+		281336041B706D830092AD5F /* PHBMultipartFormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHBMultipartFormData.h; sourceTree = "<group>"; };
+		281336051B706D830092AD5F /* PHBMultipartFormData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHBMultipartFormData.m; sourceTree = "<group>"; };
+		281336071B706F8D0092AD5F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		288B8C8A1B6F642900BF5674 /* PonyHttpBody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PonyHttpBody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288B8C8E1B6F642900BF5674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288B8C8F1B6F642900BF5674 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				281336081B706F8D0092AD5F /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		288B8C811B6F642900BF5674 = {
 			isa = PBXGroup;
 			children = (
+				281336071B706F8D0092AD5F /* MobileCoreServices.framework */,
+				288B8CB31B6F651B00BF5674 /* HttpBody */,
 				288B8C8C1B6F642900BF5674 /* PonyHttpBody */,
 				288B8CA61B6F642900BF5674 /* PonyHttpBodyTests */,
 				288B8C8B1B6F642900BF5674 /* Products */,
@@ -119,6 +130,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		288B8CB31B6F651B00BF5674 /* HttpBody */ = {
+			isa = PBXGroup;
+			children = (
+				281336011B705BDF0092AD5F /* PHBHttpRequestSerializer.h */,
+				281336021B705BDF0092AD5F /* PHBHttpRequestSerializer.m */,
+				281336041B706D830092AD5F /* PHBMultipartFormData.h */,
+				281336051B706D830092AD5F /* PHBMultipartFormData.m */,
+			);
+			name = HttpBody;
+			path = ../HttpBody;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +191,11 @@
 				TargetAttributes = {
 					288B8C891B6F642900BF5674 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					288B8CA21B6F642900BF5674 = {
 						CreatedOnToolsVersion = 6.4;
@@ -220,8 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				288B8C961B6F642900BF5674 /* ViewController.m in Sources */,
+				281336031B705BDF0092AD5F /* PHBHttpRequestSerializer.m in Sources */,
 				288B8C931B6F642900BF5674 /* AppDelegate.m in Sources */,
 				288B8C901B6F642900BF5674 /* main.m in Sources */,
+				281336061B706D830092AD5F /* PHBMultipartFormData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +446,7 @@
 				288B8CAF1B6F642900BF5674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		288B8CB01B6F642900BF5674 /* Build configuration list for PBXNativeTarget "PonyHttpBodyTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +455,7 @@
 				288B8CB21B6F642900BF5674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
