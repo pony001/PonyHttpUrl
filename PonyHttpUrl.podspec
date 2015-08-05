@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PonyHttpUrl"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "PonyHttpUrl better urlsessionrequest assembly."
 
   s.description  = <<-DESC
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/pony001/PonyHttpUrl.git", :tag => "0.0.4" }
+  s.source       = { :git => "https://github.com/pony001/PonyHttpUrl.git", :tag => "0.0.5" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
