@@ -8,17 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol PHBDataMultipartFormData;
-
-@interface PHBMultipartFormData : NSObject <PHBDataMultipartFormData>
+@interface PHBMultipartFormData : NSObject
 
 - (NSData *)httpBody;
 
 @property (strong, nonatomic) NSString *boundary;
 
-@end
-
-@protocol  PHBDataMultipartFormData <NSObject>
 /**
  Appends the HTTP header `Content-Disposition: file; filename=#{generated filename}; name=#{name}"` and `Content-Type: #{generated mimeType}`, followed by the encoded file data and the multipart form boundary.
  

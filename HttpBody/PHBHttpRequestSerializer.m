@@ -79,7 +79,7 @@
 }
 
 - (NSData *)multipartDataWithParameters:(NSDictionary *)parameters
-              constructingBodyWithBlock:(void (^)(id <PHBDataMultipartFormData> formData))block {
+              constructingBodyWithBlock:(void (^)(PHBMultipartFormData *formData))block {
     __block PHBMultipartFormData *formData = [[PHBMultipartFormData alloc] init];
     if (boundary) {
        [formData setBoundary:boundary];

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PHBMultipartFormData.h"
+
+@class PHBMultipartFormData;
 
 @interface PHBHttpRequestSerializer : NSObject
 
@@ -27,7 +28,7 @@
 + (instancetype)serializerWithBoundary:(NSString *)boundary;
 
 - (NSData *)multipartDataWithParameters:(NSDictionary *)parameters
-              constructingBodyWithBlock:(void (^)(id <PHBDataMultipartFormData> formData))block;
+              constructingBodyWithBlock:(void (^)(PHBMultipartFormData *formData))block;
 
 - (NSURLRequest *)requestWithMethod:(NSString *)method
                           URLString:(NSString *)URLString;
