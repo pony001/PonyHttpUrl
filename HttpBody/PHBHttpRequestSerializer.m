@@ -127,7 +127,7 @@
     
     [mutableRequest setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary] forHTTPHeaderField:@"Content-Type"];
     if (multipartFormData) {
-        [mutableRequest setValue:[NSString stringWithFormat:@"%lu", multipartFormData.httpBody.length] forHTTPHeaderField:@"Content-Length"];
+        [mutableRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)multipartFormData.httpBody.length] forHTTPHeaderField:@"Content-Length"];
     }
     
     return mutableRequest;
