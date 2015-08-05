@@ -117,12 +117,20 @@ NSString * const PHBURLRequestSerializationErrorDomain = @"cn.maminghan.error.se
     
     NSString *header = [PHBMultipartFormData stringWithDictionary:headers];
     
-    [httpBody appendData:[_boundary dataUsingEncoding:NSUTF8StringEncoding]];
+    id boundary = [NSString stringWithFormat:@"--%@\r\n", _boundary];
+    
+    [httpBody appendData:[boundary dataUsingEncoding:NSUTF8StringEncoding]];
     [httpBody appendData:[header dataUsingEncoding:NSUTF8StringEncoding]];
     [httpBody appendData:body];
     [httpBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
+- (void)appendLastboundary {
+    if (httpBody.length > 0) {
+        id lastLine = [NSString stringWithFormat:@"--%@", _boundary];
+        [httpBody appendData:[lastLine dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+}
 
 static inline NSString * AFContentTypeForPathExtension(NSString *extension) {
 #ifdef __UTTYPE__

@@ -69,4 +69,7 @@
 
 - (void)appendPartWithFormData:(NSData *)data
                           name:(NSString *)name;
+
+- (void)appendLastboundary;
+
 @end

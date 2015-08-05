@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "PonyHttpUrl"
   s.version      = "0.0.3"
-  s.summary      = "A short description of PonyHttpUrl."
+  s.summary      = "PonyHttpUrl better urlsessionrequest assembly."
 
   s.description  = <<-DESC
                    A longer description of PonyHttpUrl in Markdown format.
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
+  s.license      = {:type => 'MIT', :text => 'See README for full license text.' }
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

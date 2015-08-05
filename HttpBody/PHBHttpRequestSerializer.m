@@ -110,6 +110,8 @@
     if (block) {
         block(formData);
     }
+   
+    [formData appendLastboundary];
     
     multipartFormData = formData;
     
@@ -159,17 +161,9 @@
 
 #pragma mark -
 
-//- (NSDictionary *)HTTPRequestHeaders {
-//    return [NSDictionary dictionaryWithDictionary:self.mutableHTTPRequestHeaders];
-//}
-//
 - (void)setValue:(NSString *)value
 forHTTPHeaderField:(NSString *)field {
     [self.mutableHTTPRequestHeaders setValue:value forKey:field];
 }
-//
-//- (NSString *)valueForHTTPHeaderField:(NSString *)field {
-//    return [self.mutableHTTPRequestHeaders valueForKey:field];
-//}
 
 @end
