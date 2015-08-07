@@ -128,7 +128,7 @@ NSString * const PHBURLRequestSerializationErrorDomain = @"cn.maminghan.error.se
 
 - (void)appendLastboundary {
     if (httpBody.length > 0) {
-        id lastLine = [NSString stringWithFormat:@"--%@", _boundary];
+        id lastLine = [NSString stringWithFormat:@"--%@--\r\n", _boundary];
         [httpBody appendData:[lastLine dataUsingEncoding:NSUTF8StringEncoding]];
     }
 }
